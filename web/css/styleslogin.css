@@ -29,19 +29,21 @@ body {
     background-color: #ecf0f3;
     border-radius: 15px;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    flex-grow: 1;
 }
 
 .logo {
-    width: 100px;
-    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 .logo img {
-    width: 200%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+    max-width: 100%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
 }
+
 
 .wrapper .name {
     font-weight: 600;

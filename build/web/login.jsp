@@ -24,11 +24,11 @@
         <link rel="stylesheet" href="css/styleslogin.css">
     </head>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
-                <a href="IndexResponsive.html"
+                <a href="index.jsp"
                    class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img src="images/Logo.png" alt="Logo" class="img-fluid me-2" width="150">
                 </a>
@@ -46,9 +46,12 @@
                                 Eventos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">XV Años</a></li>
-                                <li><a class="dropdown-item" href="#">Bodas</a></li>
-                                <li><a class="dropdown-item" href="#">Bautizos</a></li>
+                                <li><a class="dropdown-item" href="infoXV.html">XV Años</a></li>
+                                <li><a class="dropdown-item" href="infoBodas.html">Bodas</a></li>
+                                <li><a class="dropdown-item" href="infoBautizo.html">Bautizos</a></li>
+                                <li><a class="dropdown-item" href="infoComunion.html">Comuniones</a></li>
+                                <li><a class="dropdown-item" href="infoGrado.html">Grados</a></li>
+                                <li><a class="dropdown-item" href="infoEmpresarial.html">Empresariales</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#!">Servicios</a></li>
@@ -56,15 +59,17 @@
                     </ul>
                 </div>
                 <!-- Botón de inicio de sesión -->
-                <a href="loginn.html">
+                <a href="login.jsp">
                     <button class="btn btn-outline-light ms-auto" type="button">Iniciar sesión</button>
                 </a>
         </nav>
 
         <div class="wrapper">
-            <div class="logo">
-                <img src="images/Logo.png" alt="New Dreams">
-            </div>
+            
+             <div class="logo" >
+                    <img src="images/Logo.png" alt="New Dreams">
+             </div>
+            
             <form class="p-3 mt-3" action="LoginServlet" method="post">
                 <div class="form-field d-flex align-items-center">
                     <span class="far fa-user"></span>

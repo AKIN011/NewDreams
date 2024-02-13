@@ -1,10 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 10/02/2024, 6:37:45 p. m.
-    Author     : Felipe Rodriguez
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>New Dreams-Inicio</title>
+        <title>New Dreams-Info</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -21,10 +14,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleslogin.css">
+        <link rel="stylesheet" href="css/stylesInfo.css">
     </head>
 
-    <body class="d-flex flex-column min-vh-100">
+    <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
@@ -62,31 +55,73 @@
                 <a href="login.jsp">
                     <button class="btn btn-outline-light ms-auto" type="button">Iniciar sesión</button>
                 </a>
-        </nav>
-
-        <div class="wrapper">
-            
-             <div class="logo" >
-                    <img src="images/Logo.png" alt="New Dreams">
-             </div>
-            
-            <form class="p-3 mt-3" action="LoginServlet" method="post">
-                <div class="form-field d-flex align-items-center">
-                    <span class="far fa-user"></span>
-                    <input type="text" name="userName" id="userName" placeholder="Usuario">
-                </div>
-                <div class="form-field d-flex align-items-center">
-                    <span class="fas fa-key"></span>
-                    <input type="password" name="password" id="pwd" placeholder="Contraseña">
-                </div>
-                <button class="btn mt-3">Ingresar</button>
-            </form>
-            <div class="text-center fs-6">
-                <a href="#">¿Olvidaste la contraseña?</a>
             </div>
-            <% if (request.getParameter("error") != null && request.getParameter("error").equals("true")) { %>
-            <div class="text-danger">Credenciales incorrectas. Por favor, intenta de nuevo.</div>
-            <% }%>
+        </nav>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                        aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/bodas.webp" class="d-block w-100" alt="Slide 1" style="max-height: 60vh;">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Example headline.</h1>
+                            <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bautizos.webp" class="d-block w-100 img-fluid" alt="img"
+                         style="max-height: 60vh;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hola</h5>
+                        <p>Algo de contenido representativo para el primer slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/quinces.webp" class="d-block w-100" alt="Slide 3" style="max-height: 60vh;">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>One more for good measure.</h1>
+                            <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="images/xvañosinfo.jpg" alt="Empresarial" /></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light">¡Haz que tus reuniones empresariales destaquen con New Dreams!</h1>
+                    <p>En New Dreams entendemos que las reuniones empresariales son oportunidades clave para el crecimiento y éxito de tu empresa. Es por eso que nos comprometemos a hacer de cada encuentro una experiencia memorable y productiva.
+
+                        Confía en nosotros para hacer realidad tus objetivos empresariales y dejar una impresión duradera en tus clientes, socios y empleados. En New Dreams, nos dedicamos a transformar tus reuniones empresariales en eventos extraordinarios que impulsan el éxito de tu empresa. ¡Eleva el nivel de tus encuentros empresariales con New Dreams!</p>
+                    <a class="btn btn-primary" href="#!">¡Cotizar ahora!</a>
+                </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body">
+                    <p class="text-white m-0">This call to action card is a great place to showcase some important
+                        information or display a clever tagline!</p>
+                </div>
+            </div>
         </div>
 
         <!-- Footer-->
@@ -110,11 +145,10 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 
 </html>
