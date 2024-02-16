@@ -1,3 +1,5 @@
+package Controlador;
+
 import DAO.servicioDAO;
 import Modelo.conexion;
 import Modelo.servicio;
@@ -29,10 +31,14 @@ public class serviciosServlet extends HttpServlet {
             request.setAttribute("servicios", servicios);
 
             // Enviar la solicitud al JSP
-            request.getRequestDispatcher("form.jsp").forward(request, response);
+            request.getRequestDispatcher("WebPages/form.jsp").forward(request, response);
+            System.out.println("Datos de servicios: " + servicios);
+
         } catch (SQLException e) {
             e.printStackTrace();
             // Manejo de errores
         }
+        
     }
 }
+

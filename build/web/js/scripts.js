@@ -1,17 +1,17 @@
 /*!
-* Start Bootstrap - Heroic Features v5.0.6 (https://startbootstrap.com/template/heroic-features)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-heroic-features/blob/master/LICENSE)
-*/
+ * Start Bootstrap - Heroic Features v5.0.6 (https://startbootstrap.com/template/heroic-features)
+ * Copyright 2013-2023 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 document.addEventListener("DOMContentLoaded", function (event) {
 
     const showNavbar = (toggleId, navId, bodyId, headerId) => {
         const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId),
-            bodypd = document.getElementById(bodyId),
-            headerpd = document.getElementById(headerId)
+                nav = document.getElementById(navId),
+                bodypd = document.getElementById(bodyId),
+                headerpd = document.getElementById(headerId)
 
         // Validate that all variables exist
         if (toggle && nav && bodypd && headerpd) {
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 var select = document.getElementById('event_location');
 // Obtener el div del segundo formulario
 var tengoLugarForm = document.getElementById('tengo_lugar_form');
-
 // Agregar un event listener al cambio de selección en el select
 select.addEventListener('change', function () {
     // Si el usuario selecciona "Tengo el lugar del evento"
@@ -68,7 +67,7 @@ flatpickr("#event_date", {
     dateFormat: "Y-m-d", // Formato de la fecha
     inline: true // Muestra el calendario siempre visible
 });
-document.getElementById('toggle_date_icon').addEventListener('click', function() {
+document.getElementById('toggle_date_icon').addEventListener('click', function () {
     var dateContainer = document.getElementById('date_container');
     var icon = document.getElementById('toggle_date_icon');
     if (dateContainer.style.display === 'none') {

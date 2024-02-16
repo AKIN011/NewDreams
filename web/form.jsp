@@ -63,7 +63,7 @@
                     </ul>
                 </div>
                 <!-- Botón de inicio de sesión -->
-                <a href="login.html">
+                <a href="login.jsp">
                     <button class="btn btn-outline-light ms-auto" type="button">Iniciar sesión</button>
                 </a>
             </div>
@@ -175,16 +175,13 @@
                                                     <div class="form-group">
                                                         <label for="service_name1">Nombre del servicio</label>
                                                         <input id="service_name1" type="text" name="service_name1" 
-                                                               class="form-control" placeholder="Ingrese el nombre del servicio" 
-                                                               required="required" readonly value="${servicios.get(0).getTipoServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(0).getServicioTipo()}">
                                                         <br>
                                                         <input id="service_name2" type="text" name="service_name2" 
-                                                               class="form-control" placeholder="Ingrese el nombre del servicio" 
-                                                               required="required" readonly value="${servicios.get(1).getTipoServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(1).getServicioTipo()}">
                                                         <br>
                                                         <input id="service_name3" type="text" name="service_name3" 
-                                                               class="form-control" placeholder="Ingrese el nombre del servicio" 
-                                                               required="required" readonly value="${servicios.get(2).getTipoServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(2).getServicioTipo()}">
                                                     </div>
                                                 </div>
 
@@ -192,16 +189,13 @@
                                                     <div class="form-group">
                                                         <label for="unit_price1">Precio unitario</label>
                                                         <input id="unit_price1" type="number" name="unit_price1" 
-                                                               class="form-control" placeholder="Ingrese el precio unitario" 
-                                                               required="required" readonly value="${servicios.get(0).getValorServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(0).getServicioValor()}">
                                                         <br>
                                                         <input id="unit_price2" type="number" name="unit_price2" 
-                                                               class="form-control" placeholder="Ingrese el precio unitario" 
-                                                               required="required" readonly value="${servicios.get(1).getValorServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(1).getServicioValor()}">
                                                         <br>
                                                         <input id="unit_price3" type="number" name="unit_price3" 
-                                                               class="form-control" placeholder="Ingrese el precio unitario" 
-                                                               required="required" readonly value="${servicios.get(2).getValorServicio()}">
+                                                               class="form-control" required="required" readonly value="${servicios.get(2).getServicioValor()}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">

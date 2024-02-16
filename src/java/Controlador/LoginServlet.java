@@ -31,9 +31,13 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("usuario", usuario);
             session.setAttribute("rol", rol);
             if (rol.equals("administrador")) {
-                response.sendRedirect("dashboard.jsp"); // Redirecciona al panel del administrador
+                response.sendRedirect("principal.jsp"); // Redirecciona al panel del administrador
+                session.setAttribute("usuario", usuario);
+                session.setAttribute("rol", rol);
             } else if (rol.equals("cliente")) {
                 response.sendRedirect("perfilCliente.jsp"); // Redirecciona al perfil del cliente
+                session.setAttribute("usuario", usuario);
+                session.setAttribute("rol", rol);
             }
         } else {
             response.sendRedirect("login.jsp?error=true"); // Redirecciona de nuevo al formulario de inicio de sesión con un mensaje de error

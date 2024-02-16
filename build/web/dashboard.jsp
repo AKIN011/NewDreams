@@ -21,87 +21,68 @@
     </head>
 
     <body id="body-pd">
-        <header class="header" id="header">
-            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
-        </header>
-        <div class="l-navbar" id="nav-bar">
-            <nav class="nav">
-                <div>
-                    <a href="#" class="nav_logo">
-                        <i class='bx bx-layer nav_logo-icon'></i>
-                        <span class="nav_logo-name">BBBootstrap</span>
-                    </a>
-                    <div class="nav_list">
-                        <a href="#" class="nav_link active">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Dashboard</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-user nav_icon'></i>
-                            <span class="nav_name">Users</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-message-square-detail nav_icon'></i>
-                            <span class="nav_name">Messages</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-bookmark nav_icon'></i>
-                            <span class="nav_name">Bookmark</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-folder nav_icon'></i>
-                            <span class="nav_name">Files</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                            <span class="nav_name">Stats</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Botón de cerrar sesión -->
-                <a href="#" id="logoutButton" class="nav_link">
-                    <i class='bx bx-log-out nav_icon'></i>
-                    <span class="nav_name">Cerrar Sesión</span>
-                </a>
-            </nav>
-        </div>
-
         <!--Container Main start-->
-        <div class="container-fluid">
+        <div class="container-">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card bg-primary text-white mb-4">
-                        <div class="card-body">Primary Card</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Cotizaciones
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center">
+                            <a class="small text-black stretched-link" href="#">View Details</a>
+                            <div class="small text-black"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Eventos
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Servicios
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center">
+                            <a class="small text-black stretched-link" href="#">View Details</a>
+                            <div class="small text-black"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Clientes
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center">
+                            <a class="small text-black stretched-link" href="#">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card bg-warning text-white mb-4">
-                        <div class="card-body">Warning Card</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Estados
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center">
+                            <a class="small text-black stretched-link" href="#">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card bg-success text-white mb-4">
-                        <div class="card-body">Success Card</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card bg-info text-black">
+                        <div class="card-body text-center align-items-center">
+                            Pagos
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card bg-danger text-white mb-4">
-                        <div class="card-body">Danger Card</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
+                        <div class="card-footer d-flex align-items-center justify-content-center">
+                            <a class="small text-black stretched-link" href="#">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -109,21 +90,6 @@
             </div>
         </div>
     </body>
-    <!--Boton cierre de sesion-->
-    <script>
-        document.getElementById('logoutButton').addEventListener('click', function (event) {
-            event.preventDefault(); // Evitar que el enlace realice la acción predeterminada (navegar a una URL)
-
-            // Enviar una solicitud al servidor para cerrar la sesión
-            fetch('LogoutServlet', {
-                method: 'POST'
-            }).then(function (response) {
-                // Redireccionar a la página de inicio de sesión después de cerrar sesión
-                window.location.href = 'login.jsp';
-            }).catch(function (error) {
-                console.error('Error al cerrar sesión:', error);
-            });
-        });
-    </script>
 
 </html>
+

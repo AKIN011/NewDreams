@@ -27,7 +27,7 @@ public class servicioDAO {
                 int valorServicio = resultSet.getInt("Valor_Servicio");
                 String tipoServicio = resultSet.getString("Tipo_Servicio");
                 String descripcionServicio = resultSet.getString("Descripcion_servicio");
-                  System.out.println(tipoServicio);
+                 System.out.println("ID: " + idServicio + ", Valor: " + valorServicio + ", Tipo: " + tipoServicio + ", Descripción: " + descripcionServicio);
                 servicios.add(new servicio(idServicio, valorServicio, tipoServicio, descripcionServicio));
             }
         }

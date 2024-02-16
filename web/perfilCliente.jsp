@@ -33,13 +33,15 @@
                         <span class="nav_logo-name">BBBootstrap</span>
                     </a>
                     <div class="nav_list">
-                        <a href="#" class="nav_link active">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Dashboard</span>
+                        <%
+                            String usuario = (String) session.getAttribute("usuario");
+                            String rol = (String) session.getAttribute("rol");
+                        %>
+                        <a class="nav_link">
+                            <span class="nav_name"><%= usuario%></span>
                         </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-user nav_icon'></i>
-                            <span class="nav_name">Users</span>
+                        <a class="nav_link">
+                            <span class="nav_name"><%= rol%></span>
                         </a>
                         <a href="#" class="nav_link">
                             <i class='bx bx-message-square-detail nav_icon'></i>
