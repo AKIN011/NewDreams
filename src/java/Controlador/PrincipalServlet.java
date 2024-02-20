@@ -1,7 +1,9 @@
-
 package Controlador;
 
+import DAO.cotizanteDAO;
+import Modelo.cotizante;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,24 +14,49 @@ import javax.servlet.http.HttpServletResponse;
  * @author Felipe Rodriguez
  */
 public class PrincipalServlet extends HttpServlet {
+
+    cotizante cotizante = new cotizante();
+    cotizanteDAO cotizanteDAO = new cotizanteDAO();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String menu = request.getParameter("menu");
         String accion = request.getParameter("accion");
-        if (accion == null || accion.isEmpty()) {
-            // Si no se proporciona ningún parámetro de acción, redirecciona al dashboard
+        if (menu.equals("Inicio")) {
             request.getRequestDispatcher("dashboard.jsp").forward(request, response);
-            return; // Importante: termina la ejecución del método después de la redirección
         }
-        switch (accion) {
-            case "Inicio" -> request.getRequestDispatcher("dashboard.jsp").forward(request, response);
-            case "Cotizaciones" -> request.getRequestDispatcher("cotizaciones.jsp").forward(request, response);
-            case "Cotizantes" -> request.getRequestDispatcher("cotizantes.jsp").forward(request, response);
-            case "Clientes" -> request.getRequestDispatcher("clientes.jsp").forward(request, response);
-            case "Eventos" -> request.getRequestDispatcher("eventos.jsp").forward(request, response);
-            case "Estados" -> request.getRequestDispatcher("estados.jsp").forward(request, response);
-            case "Servicios" -> request.getRequestDispatcher("servicios.jsp").forward(request, response);
-            default -> throw new AssertionError();
+        if (menu.equals("Cotizaciones")) {
+            request.getRequestDispatcher("cotizaciones.jsp").forward(request, response);
         }
+        if (menu.equals("Cotizantes")) {
+            switch (accion) {
+                case "listar":
+                    List lista = cotizanteDAO.listar();
+                    request.setAttribute("cotizantes", lista);
+                    break;
+                case "Agregar":
+                    break;
+                case "Editar":
+                    break;
+                case "Eliminar":
+                    break;
+            }
+            request.getRequestDispatcher("cotizantes.jsp").forward(request, response);
+        }
+        if (menu.equals("Clientes")) {
+            request.getRequestDispatcher("clientes.jsp").forward(request, response);
+        }
+        if (menu.equals("Eventos")) {
+            request.getRequestDispatcher("eventos.jsp").forward(request, response);
+        }
+        if (menu.equals("Estados")) {
+            request.getRequestDispatcher("estados.jsp").forward(request, response);
+        }
+        if (menu.equals("Servicios")) {
+            request.getRequestDispatcher("servicios.jsp").forward(request, response);
+        }
+        throw new AssertionError();
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

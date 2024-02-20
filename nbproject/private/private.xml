@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Modelo/conexion.java</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Modelo/comprobar.java</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/web/js/scripts.js</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Modelo/servicio.java</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/web/infoXV.html</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/DAO/servicioDAO.java</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/web/form.jsp</file>
-            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Controlador/serviciosServlet.java</file>
+            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Modelo/cotizante.java</file>
+            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/DAO/cotizanteDAO.java</file>
+            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/src/java/Controlador/PrincipalServlet.java</file>
+            <file>file:/C:/Users/Felipe%20Rodriguez/Documents/NetBeansProjects/New%20Dreams/web/cotizantes.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -41,25 +41,25 @@
                         <a class="nav_link">
                             <span class="nav_name"><%= rol%></span>
                         </a>
-                        <a href="PrincipalServlet?accion=Inicio" target="myFrame" class="nav_link active">
+                        <a href="PrincipalServlet?menu=Inicio" target="myFrame" class="nav_link active">
                             <span class="nav_name">Inicio</span>
                         </a>
-                        <a href="PrincipalServlet?accion=Cotizaciones" target="myFrame" class="nav_link">
-                            <span class="nav_name">Cotizaciones</span>
-                        </a>
-                        <a href="PrincipalServlet?accion=Cotizantes" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Cotizantes&accion=listar" target="myFrame" class="nav_link">
                             <span class="nav_name">Cotizantes</span>
                         </a>
-                        <a href="PrincipalServlet?accion=Clientes" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Cotizaciones" target="myFrame" class="nav_link">
+                            <span class="nav_name">Cotizaciones</span>
+                        </a>
+                        <a href="PrincipalServlet?menu=Clientes" target="myFrame" class="nav_link">
                             <span class="nav_name">Clientes</span>
                         </a>
-                        <a href="PrincipalServlet?accion=Eventos" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Eventos" target="myFrame" class="nav_link">
                             <span class="nav_name">Eventos</span>
                         </a>
-                        <a href="PrincipalServlet?accion=Estados" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Estados" target="myFrame" class="nav_link">
                             <span class="nav_name">Estados</span>
                         </a>
-                        <a href="PrincipalServlet?accion=Servicios" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Servicios" target="myFrame" class="nav_link">
                             <span class="nav_name">Servicios</span>
                         </a>
 

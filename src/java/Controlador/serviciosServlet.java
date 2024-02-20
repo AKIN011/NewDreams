@@ -1,11 +1,8 @@
 package Controlador;
 
 import DAO.servicioDAO;
-import Modelo.conexion;
 import Modelo.servicio;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,32 +10,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class serviciosServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Crear instancia de conexion
-        conexion con = new conexion();
-        
-        // Obtener conexión a la base de datos
-        Connection connection = con.conectar();
-        
-        // Crear instancia de servicioDAO
-        servicioDAO servicioDAO = new servicioDAO(connection);
 
-        try {
-            // Consultar todos los servicios
-            List<servicio> servicios = servicioDAO.consultarTodosServicios();
+    private servicioDAO servicioDAO = new servicioDAO();
 
-            // Agregar la lista de servicios como atributo de solicitud
-            request.setAttribute("servicios", servicios);
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("Procesando solicitud en el método processRequest()...");
 
-            // Enviar la solicitud al JSP
-            request.getRequestDispatcher("WebPages/form.jsp").forward(request, response);
-            System.out.println("Datos de servicios: " + servicios);
+        // Obtener lista de servicios
+        System.out.println("Obteniendo lista de servicios...");
+        List<servicio> lista = servicioDAO.consultarTodosServicios();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // Manejo de errores
-        }
-        
+        // Imprimir número de servicios obtenidos
+        System.out.println("Número de servicios obtenidos: " + lista.size());
+
+        // Pasar lista de servicios al formulario JSP
+        System.out.println("Pasando lista de servicios al formulario JSP...");
+        request.setAttribute("servicios", lista);
+
+        // Enviar la solicitud al JSP
+        request.getRequestDispatcher("form.jsp").forward(request, response);
+
+        // Mensaje indicando que la lista se ha pasado correctamente
+        System.out.println("Lista de servicios pasada al formulario JSP con éxito.");
     }
 }
-

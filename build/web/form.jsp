@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -160,61 +161,38 @@
                                             <div class="row">
                                                 <div class="col-md-2">
                                                     <div class="form-group">
-                                                        <label for="service_name">Cantidad</label>
-                                                        <input id="service_name" type="text" name="service_name"
-                                                               class="form-control" placeholder="0" required="required">
-                                                        <br>
-                                                        <input id="service_name" type="text" name="service_name"
-                                                               class="form-control" placeholder="0" required="required">
-                                                        <br>
-                                                        <input id="service_name" type="text" name="service_name"
-                                                               class="form-control" placeholder="0" required="required">
+                                                        <label for="service_quantity">Cantidad</label>
+                                                        <input id="service_quantity" type="text" name="service_quantity" class="form-control" placeholder="0" required="required">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <label for="service_name1">Nombre del servicio</label>
-                                                        <input id="service_name1" type="text" name="service_name1" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(0).getServicioTipo()}">
-                                                        <br>
-                                                        <input id="service_name2" type="text" name="service_name2" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(1).getServicioTipo()}">
-                                                        <br>
-                                                        <input id="service_name3" type="text" name="service_name3" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(2).getServicioTipo()}">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="unit_price1">Precio unitario</label>
-                                                        <input id="unit_price1" type="number" name="unit_price1" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(0).getServicioValor()}">
-                                                        <br>
-                                                        <input id="unit_price2" type="number" name="unit_price2" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(1).getServicioValor()}">
-                                                        <br>
-                                                        <input id="unit_price3" type="number" name="unit_price3" 
-                                                               class="form-control" required="required" readonly value="${servicios.get(2).getServicioValor()}">
+                                                        <label for="service_name">Nombre del servicio</label>
+                                                        <c:forEach var="servicio" items="${servicios}">
+                                                            <input type="text" class="form-control" value="${servicio.getServicioTipo}" readonly>
+                                                        </c:forEach>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="total_price">Precio total</label>
-                                                        <input id="total_price" type="number" name="total_price"
-                                                               class="form-control" placeholder="Precio total calculado"
-                                                               readonly>
-                                                        <br>
-                                                        <input id="total_price" type="number" name="total_price"
-                                                               class="form-control" placeholder="Precio total calculado"
-                                                               readonly>
-                                                        <br>
-                                                        <input id="total_price" type="number" name="total_price"
-                                                               class="form-control" placeholder="Precio total calculado"
-                                                               readonly>
+                                                        <label for="service_unit_price">Precio unitario</label>
+                                                        <c:forEach var="servicio" items="${servicios}">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>${servicio.getServicioTipo}</td>
+                                                                </tr>
+                                                            </table>
+                                                        </c:forEach>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="service_total_price">Precio total</label>
+                                                        <input type="number" class="form-control" placeholder="Precio total calculado" readonly>
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <br>
