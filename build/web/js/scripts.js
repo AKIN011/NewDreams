@@ -80,6 +80,7 @@ document.getElementById('toggle_date_icon').addEventListener('click', function (
         icon.classList.add('fa-calendar-alt');
     }
 });
+
 $(document).ready(function() {
     $('.crear-cliente-btn').click(function() {
         $('#formulario-crear').modal('show');
