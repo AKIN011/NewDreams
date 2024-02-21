@@ -49,5 +49,48 @@ public class cotizanteDAO {
             e.toString();
         }
         return agregarCotizante;
-    }   
+    }
+    
+    public cotizante listarId(String correo){
+        cotizante  cot = new cotizante();
+        String sql = "CALL SP_READ_COTIZANTE('" + correo + "')";
+        try{
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                cot.setCotizanteCorreo(rs.getString(1));
+                cot.setCotizanteNombre(rs.getString(2));
+                cot.setCotizanteApellido(rs.getString(3));
+                cot.setCotizanteTelefono(rs.getString(4));
+            }
+        }catch(Exception e){
+            e.toString();
+        }
+        return cot;
+    }
+    
+    public int actualizar(cotizante cot){
+        String sql = "CALL SP_UPDATE_COTIZANTE (?, ?, ?, ?, ?)";
+        try{
+            ps = con.prepareStatement(sql);
+            ps.setString(1, cot.getCotizanteCorreo());
+            ps.setString(2, cot.getCotizanteNombre());
+            ps.setString(3, cot.getCotizanteApellido());
+            ps.setString(4, cot.getCotizanteTelefono());
+            ps.executeUpdate();
+        }catch(Exception e){
+            e.toString();
+        }
+        return agregarCotizante;
+    }
+    
+    public void eliminar (String correo){
+        String sql = "CALL SP_DELETE_COTIZANTE('" + correo + "')";
+        try{
+            ps= con.prepareStatement(sql);
+            ps.executeUpdate();
+        }catch(Exception e){
+            e.toString();
+        }
+    }
 }

@@ -1,6 +1,8 @@
 package Controlador;
 
+import DAO.clienteDAO;
 import DAO.cotizanteDAO;
+import Modelo.cliente;
 import Modelo.cotizante;
 import java.io.IOException;
 import java.util.List;
@@ -17,7 +19,6 @@ public class PrincipalServlet extends HttpServlet {
 
     cotizante cotizante = new cotizante();
     cotizanteDAO cotizanteDAO = new cotizanteDAO();
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
@@ -35,6 +36,14 @@ public class PrincipalServlet extends HttpServlet {
                     request.setAttribute("cotizantes", lista);
                     break;
                 case "Agregar":
+                    cliente cliente = new cliente();
+                    clienteDAO clienteDAO = new clienteDAO();
+                    String correo = request.getParameter("correoClt");
+                    String contraseña = request.getParameter("contraseñaClt");                   
+                    cliente.setCltCorreo(correo);
+                    cliente.setCltContraseña(contraseña);
+                    clienteDAO.agregar(cliente);
+                    request.getRequestDispatcher("PrincipalServlet?menu=Cotizantes&accion=listar").forward(request, response);
                     break;
                 case "Editar":
                     break;

@@ -47,14 +47,74 @@
                                     <td>${cotizantes.getCotizanteTelefono()}</td>
                                     <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
                                     <td><i class="fa-solid fa-trash"></i></td>
-
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
                 </div>
-                
             </div>
         </div>
     </body>
+    <div id="formulario-crear" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formulario-crear-cliente" action="PrincipalServlet?menu=Cotizantes" method="POST">
+                        <div class="form-group">
+                            <label for="correo">Correo Cotizante:</label>
+                            <input type="email" class="form-control" id="correoClt" name="correoClt" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasenaClt" name="contraseñaClt" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="btn-guardar" href="PrincipalServlet?menu=Cotizantes&accion=Agregar">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Esta función se ejecuta cuando el documento HTML ha sido completamente cargado
+
+            // Función asociada al evento clic en elementos con la clase 'crear-cliente-btn'
+            $('.crear-cliente-btn').click(function () {
+                // Obtiene el correo del cotizante de la fila en la que se hizo clic
+                var correoCotizante = $(this).closest('tr').find('td:eq(0)').text();
+
+                // Establece el valor del campo 'correoClt' en el formulario con el correo del cotizante obtenido
+                $('#correoClt').val(correoCotizante);
+
+                // Muestra el formulario para crear cliente
+                $('#formulario-crear').modal('show');
+            });
+
+            // Función asociada al evento clic en el elemento con el id 'btn-guardar'
+            $('#btn-guardar').click(function () {
+                // Obtiene el valor del campo 'correoClt' del formulario
+                var correoCotizante = $('#correoClt').val();
+
+                // Modifica el atributo 'href' del elemento con id 'btn-guardar' para incluir el correo del cotizante
+                $(this).attr('href', 'PrincipalServlet?menu=Cotizantes&accion=Agregar' + encodeURIComponent(correoCotizante));
+
+
+                // Envía el formulario
+                $('#formulario-crear-cliente').submit();
+            });
+        });
+
+    </script>
+
+
 </html>
