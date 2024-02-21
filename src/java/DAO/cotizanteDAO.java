@@ -16,13 +16,13 @@ public class cotizanteDAO {
    ResultSet rs;
    int agregarCotizante;
 
-    public List <cotizante> listar(){
-        List <cotizante> lista = new ArrayList<>();
+    public List<cotizante> listar() {
+        List<cotizante> lista = new ArrayList<>();
         String sql = "CALL SP_READLIST_COTIZANTE";
         try {
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
-            while(rs.next()){
+            rs = ps.executeQuery(); // Asignar el resultado de la consulta a rs
+            while (rs.next()) {
                 cotizante cot = new cotizante();
                 cot.setCotizanteCorreo(rs.getString(1));
                 cot.setCotizanteNombre(rs.getString(2));
@@ -30,8 +30,8 @@ public class cotizanteDAO {
                 cot.setCotizanteTelefono(rs.getString(4));
                 lista.add(cot);
             }
-        }catch (Exception e){
-            e.toString();
+        } catch (Exception e) {
+            e.printStackTrace(); // Imprimir el error
         }
         return lista;
     }
@@ -49,30 +49,5 @@ public class cotizanteDAO {
             e.toString();
         }
         return agregarCotizante;
-    }
-    
-    public int actualizar(cotizante cot){
-        String sql = "CALL SP_UPDATE_COTIZANTE (?, ?, ?, ?, ?)";
-        try{
-            ps = con.prepareStatement(sql);
-            ps.setString(1, cot.getCotizanteCorreo());
-            ps.setString(2, cot.getCotizanteNombre());
-            ps.setString(3, cot.getCotizanteApellido());
-            ps.setString(4, cot.getCotizanteTelefono());
-            ps.executeUpdate();
-        }catch(Exception e){
-            e.toString();
-        }
-        return agregarCotizante;
-    }
-    
-    public void eliminar (String correo){
-        String sql = "CALL SP_DELETE_COTIZANTE('" + correo + "')";
-        try{
-            ps= con.prepareStatement(sql);
-            ps.executeUpdate();
-        }catch(Exception e){
-            e.toString();
-        }
-    }
+    }   
 }

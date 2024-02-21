@@ -16,13 +16,13 @@
         <link rel="stylesheet" href="css/stylesdashboard.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 
     <body id="body-pd">
-        hola soy dashboard
         <!--Container Main start-->
         <div class="container mt-5">
             <div class="row">
@@ -34,6 +34,8 @@
                                 <th scope="col">Nombres</th>
                                 <th scope="col">Apellidos</th>
                                 <th scope="col">Telefono</th>
+                                <th scope="col">Crear cliente</th>
+                                <th scope="col">Eliminar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,13 +45,15 @@
                                     <td>${cotizantes.getCotizanteNombre()}</td>
                                     <td>${cotizantes.getCotizanteApellido()}</td>
                                     <td>${cotizantes.getCotizanteTelefono()}</td>
+                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
+                                    <td><i class="fa-solid fa-trash"></i></td>
+
                                 </tr>
                             </c:forEach>
-
-
                         </tbody>
                     </table>
                 </div>
+                
             </div>
         </div>
     </body>

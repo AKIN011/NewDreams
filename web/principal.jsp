@@ -75,10 +75,10 @@
 
         <div class="Frame">
             <iframe id="myFrame" name="myFrame">
-                
+
             </iframe>
         </div>    
-                        
+
     </body>
     <script>
         document.getElementById('logoutButton').addEventListener('click', function (event) {
@@ -94,5 +94,8 @@
                 console.error('Error al cerrar sesión:', error);
             });
         });
+        window.onload = function () {
+            document.getElementById('myFrame').src = 'dashboard.jsp';
+        };
     </script>
 </html>
