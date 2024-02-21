@@ -1,0 +1,32 @@
+.card {
+    padding: 30px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #9036BA 20%, #9036BA, #9036BA, #FFFFFF);
+    width: 300px;
+    height: 220px;
+}
+
+.card-body {
+    font-size: 50px;
+}
+
+.card-footer {
+    padding: 30px;
+    border-top: 20px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-footer a:hover {
+    color: #FFFFFF;
+}
+
+.col-lg-6, .col-md-6 {
+    margin-bottom: 20px;
+}
