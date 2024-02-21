@@ -86,34 +86,18 @@
 
     <script>
         $(document).ready(function () {
-            // Esta función se ejecuta cuando el documento HTML ha sido completamente cargado
-
-            // Función asociada al evento clic en elementos con la clase 'crear-cliente-btn'
-            $('.crear-cliente-btn').click(function () {
-                // Obtiene el correo del cotizante de la fila en la que se hizo clic
-                var correoCotizante = $(this).closest('tr').find('td:eq(0)').text();
-
-                // Establece el valor del campo 'correoClt' en el formulario con el correo del cotizante obtenido
-                $('#correoClt').val(correoCotizante);
-
-                // Muestra el formulario para crear cliente
-                $('#formulario-crear').modal('show');
-            });
-
-            // Función asociada al evento clic en el elemento con el id 'btn-guardar'
-            $('#btn-guardar').click(function () {
-                // Obtiene el valor del campo 'correoClt' del formulario
-                var correoCotizante = $('#correoClt').val();
-
-                // Modifica el atributo 'href' del elemento con id 'btn-guardar' para incluir el correo del cotizante
-                $(this).attr('href', 'PrincipalServlet?menu=Cotizantes&accion=Agregar' + encodeURIComponent(correoCotizante));
-
-
-                // Envía el formulario
-                $('#formulario-crear-cliente').submit();
-            });
+        $('.crear-cliente-btn').click(function () {
+            var correoCotizante = $(this).closest('tr').find('td:eq(0)').text(); // Obtener el correo del cotizante
+            $('#correoClt').val(correoCotizante); // Actualizar el campo correoClt en el formulario
+            $('#formulario-crear').modal('show');
         });
-
+        
+        $('#btn-guardar').click(function() {
+            var correoCotizante = $('#correoClt').val();
+            $(this).attr('href', $(this).attr('href') + '&Correo=' + encodeURIComponent(correoCotizante));
+            $('#formulario-crear-cliente').submit();
+        });
+    });
     </script>
 
 
