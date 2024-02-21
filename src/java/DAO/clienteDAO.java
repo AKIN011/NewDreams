@@ -3,6 +3,8 @@ package DAO;
 import Modelo.cliente;
 import Modelo.conexion;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class clienteDAO {
 
@@ -48,6 +50,25 @@ public class clienteDAO {
         return resultado;
     }
 
+    public List<cliente> listar() {
+        List<cliente> lista = new ArrayList<>();
+        String sql = "CALL SP_READLIST_CLIENTE";
+        try {
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery(); // Asignar el resultado de la consulta a rs
+            while (rs.next()) {
+                cliente clt = new cliente();
+                clt.setCltId((char) rs.getShort(1));
+                clt.setCltContraseña(rs.getString(2));
+                clt.setCltCorreo(rs.getString(3));
+                lista.add(clt);
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); // Imprimir el error
+        }
+        return lista;
+    }
+    
     public int agregar(cliente clt) {
         String sql = "CALL SP_INSERT_CLIENTE (?, ?)";
         int filasAfectadas = 0;

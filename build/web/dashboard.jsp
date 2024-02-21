@@ -68,7 +68,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Clientes">Clientes</a>
+                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Clientes&accion=listar">Clientes</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>

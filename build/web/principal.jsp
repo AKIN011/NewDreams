@@ -50,7 +50,7 @@
                         <a href="PrincipalServlet?menu=Cotizaciones" target="myFrame" class="nav_link">
                             <span class="nav_name">Cotizaciones</span>
                         </a>
-                        <a href="PrincipalServlet?menu=Clientes" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Clientes&accion=listar" target="myFrame" class="nav_link">
                             <span class="nav_name">Clientes</span>
                         </a>
                         <a href="PrincipalServlet?menu=Eventos" target="myFrame" class="nav_link">

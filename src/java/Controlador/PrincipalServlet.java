@@ -19,6 +19,9 @@ public class PrincipalServlet extends HttpServlet {
 
     cotizante cotizante = new cotizante();
     cotizanteDAO cotizanteDAO = new cotizanteDAO();
+    cliente cliente = new cliente();
+    clienteDAO clienteDAO = new clienteDAO();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
@@ -36,10 +39,8 @@ public class PrincipalServlet extends HttpServlet {
                     request.setAttribute("cotizantes", lista);
                     break;
                 case "Agregar":
-                    cliente cliente = new cliente();
-                    clienteDAO clienteDAO = new clienteDAO();
                     String correo = request.getParameter("correoClt");
-                    String contraseña = request.getParameter("contraseñaClt");                   
+                    String contraseña = request.getParameter("contraseñaClt");
                     cliente.setCltCorreo(correo);
                     cliente.setCltContraseña(contraseña);
                     clienteDAO.agregar(cliente);
@@ -53,6 +54,12 @@ public class PrincipalServlet extends HttpServlet {
             request.getRequestDispatcher("cotizantes.jsp").forward(request, response);
         }
         if (menu.equals("Clientes")) {
+            switch (accion) {
+                case "listar":
+                    List lista = clienteDAO.listar();
+                    request.setAttribute("clientes", lista);
+                    break;
+            }
             request.getRequestDispatcher("clientes.jsp").forward(request, response);
         }
         if (menu.equals("Eventos")) {
