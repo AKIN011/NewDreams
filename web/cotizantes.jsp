@@ -45,7 +45,7 @@
                                     <td>${cotizantes.getCotizanteNombre()}</td>
                                     <td>${cotizantes.getCotizanteApellido()}</td>
                                     <td>${cotizantes.getCotizanteTelefono()}</td>
-                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
+                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;" data-correo="${cotizantes.getCotizanteCorreo()}"></i></td>
                                     <td><i class="fa-solid fa-trash"></i></td>
                                 </tr>
                             </c:forEach>
@@ -77,7 +77,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="btn-guardar" href="PrincipalServlet?menu=Cotizantes&accion=Agregar">Guardar</button>
+                    <button type="button" class="btn btn-primary" id="btn-guardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>
@@ -86,19 +86,19 @@
 
     <script>
         $(document).ready(function () {
-        $('.crear-cliente-btn').click(function () {
-            var correoCotizante = $(this).closest('tr').find('td:eq(0)').text(); // Obtener el correo del cotizante
-            $('#correoClt').val(correoCotizante); // Actualizar el campo correoClt en el formulario
-            $('#formulario-crear').modal('show');
+            $('.crear-cliente-btn').click(function () {
+                var correoCotizante = $(this).data('correo');
+                $('#correoClt').val(correoCotizante);
+                $('#formulario-crear').modal('show');
+            });
+
+            $(document).ready(function () {
+                $('#btn-guardar').click(function () {
+                    var correo = $('#correoClt').val();
+                    var contraseña = $('#contrasenaClt').val();
+                    window.location.href = "PrincipalServlet?menu=Cotizantes&accion=Agregar&correoClt=" + correo + "&contraseñaClt=" + contraseña;
+                });
+            });
         });
-        
-        $('#btn-guardar').click(function() {
-            var correoCotizante = $('#correoClt').val();
-            $(this).attr('href', $(this).attr('href') + '&Correo=' + encodeURIComponent(correoCotizante));
-            $('#formulario-crear-cliente').submit();
-        });
-    });
     </script>
-
-
 </html>

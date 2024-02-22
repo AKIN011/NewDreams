@@ -50,25 +50,29 @@ public class clienteDAO {
         return resultado;
     }
 
-    public List<cliente> listar() {
-        List<cliente> lista = new ArrayList<>();
-        String sql = "CALL SP_READLIST_CLIENTE";
+    public List<Object[]> listarClientes() {
+        List<Object[]> lista = new ArrayList<>();
+        String sql = "SELECT C.Correo_Cotizante, C.Nombre_Cotizante, C.Apellido_Cotizante, C.Telefono_Cotizante, Cl.idCliente, Cl.Contraseña_Cliente "
+                + "FROM Cotizante C JOIN Cliente Cl ON C.Correo_Cotizante = Cl.Correo_cotizante GROUP BY Cl.idCliente";
         try {
             ps = con.prepareStatement(sql);
-            rs = ps.executeQuery(); // Asignar el resultado de la consulta a rs
+            rs = ps.executeQuery();
             while (rs.next()) {
-                cliente clt = new cliente();
-                clt.setCltId((char) rs.getShort(1));
-                clt.setCltContraseña(rs.getString(2));
-                clt.setCltCorreo(rs.getString(3));
-                lista.add(clt);
+                Object[] clienteCotizante = new Object[6];
+                clienteCotizante[0] = rs.getString("Correo_Cotizante");
+                clienteCotizante[1] = rs.getString("Nombre_Cotizante");
+                clienteCotizante[2] = rs.getString("Apellido_Cotizante");
+                clienteCotizante[3] = rs.getString("Telefono_Cotizante");
+                clienteCotizante[4] = rs.getString("idCliente");
+                clienteCotizante[5] = rs.getString("Contraseña_Cliente");
+                lista.add(clienteCotizante);
             }
         } catch (Exception e) {
             e.printStackTrace(); // Imprimir el error
         }
         return lista;
     }
-    
+
     public int agregar(cliente clt) {
         String sql = "CALL SP_INSERT_CLIENTE (?, ?)";
         int filasAfectadas = 0;
