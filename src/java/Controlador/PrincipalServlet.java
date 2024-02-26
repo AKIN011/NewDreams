@@ -1,6 +1,7 @@
 package Controlador;
 
 import DAO.clienteDAO;
+import DAO.cotizacionDAO;
 import DAO.cotizanteDAO;
 import Modelo.cliente;
 import Modelo.cotizante;
@@ -21,6 +22,7 @@ public class PrincipalServlet extends HttpServlet {
     cotizanteDAO cotizanteDAO = new cotizanteDAO();
     cliente cliente = new cliente();
     clienteDAO clienteDAO = new clienteDAO();
+    cotizacionDAO cotizacionDAO = new cotizacionDAO();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,6 +32,12 @@ public class PrincipalServlet extends HttpServlet {
             request.getRequestDispatcher("dashboard.jsp").forward(request, response);
         }
         if (menu.equals("Cotizaciones")) {
+            switch (accion){
+                case "listar":
+                    List <Object[]> listaCotizaciones = cotizacionDAO.listarCotizaciones();
+                    request.setAttribute("cotizaciones", listaCotizaciones);
+                    break;
+            }
             request.getRequestDispatcher("cotizaciones.jsp").forward(request, response);
         }
         if (menu.equals("Cotizantes")) {

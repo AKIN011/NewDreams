@@ -47,7 +47,7 @@
                         <a href="PrincipalServlet?menu=Cotizantes&accion=listar" target="myFrame" class="nav_link">
                             <span class="nav_name">Cotizantes</span>
                         </a>
-                        <a href="PrincipalServlet?menu=Cotizaciones" target="myFrame" class="nav_link">
+                        <a href="PrincipalServlet?menu=Cotizaciones&accion=listar" target="myFrame" class="nav_link">
                             <span class="nav_name">Cotizaciones</span>
                         </a>
                         <a href="PrincipalServlet?menu=Clientes&accion=listar" target="myFrame" class="nav_link">

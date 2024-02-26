@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class servicioDAO {
-    Connection con = new conexion().conectar();
+   Connection con = new conexion().conectar();
    PreparedStatement ps;
    ResultSet rs;
 

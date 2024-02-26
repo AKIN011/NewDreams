@@ -32,7 +32,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Cotizaciones">Cotizaciones</a>
+                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Cotizaciones&accion=listar">Cotizaciones</a>
                             <div class="small text-black"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Eventos">Eventos</a>
+                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Eventos&accion=listar">Eventos</a>
                             <div class="small text-black"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
