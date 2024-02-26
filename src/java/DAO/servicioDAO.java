@@ -30,7 +30,7 @@ public class servicioDAO {
                 lista.add(ser);
             }
         }catch (Exception e){
-            e.toString();
+            e.printStackTrace();
         }
         return lista;
     }

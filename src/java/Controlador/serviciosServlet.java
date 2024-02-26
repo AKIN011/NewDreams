@@ -13,12 +13,18 @@ public class serviciosServlet extends HttpServlet {
 
     servicioDAO servicioDAO = new servicioDAO();
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
         String accion = request.getParameter("accion");
-        List<servicio> lista = servicioDAO.consultarTodosServicios();
-        request.setAttribute("servicios", lista);
-
-        request.getRequestDispatcher("form.jsp").forward(request, response);
+        String menu = request.getParameter("menu");
+        if (menu.equals("form")) {
+            switch (accion) {
+                case "listar":
+                    List<servicio> lista = servicioDAO.consultarTodosServicios();
+                    request.setAttribute("servicios", lista);
+            }
+            request.getRequestDispatcher("form.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

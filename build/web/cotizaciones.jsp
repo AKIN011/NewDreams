@@ -46,25 +46,24 @@
                                         <!-- Detalle desplegable oculto por defecto -->
                                         <div class="detalle">
                                             <!-- Aquí debes agregar el contenido detallado -->
-                                            <table>
-                                                <tr>
-                                                    <td>${cotizacion[2]}</td>
-                                                    <td>${cotizacion[3]}</td>
-                                                    <td>${cotizacion[4]}</td>
-                                                    <td>${cotizacion[5]}</td>
-                                                    <td>${cotizacion[6]}</td>
-                                                    <td>${cotizacion[0]}</td>
-                                                    <td>${cotizacion[8]}</td>
-                                                    <td>${cotizacion[9]}</td>
-                                                    <td>${cotizacion[10]}</td>
-                                                    <td>${cotizacion[11]}</td>
-                                                    <td>${cotizacion[12]}</td>
-                                                    <td>${cotizacion[13]}</td>
-                                                    <td>${cotizacion[14]}</td>
-                                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
-                                                    <td><i class="fa-solid fa-trash"></i></td>
-                                                </tr>
-                                            </table>
+                                            <form action="actualizarCotizacion" method="post">
+                                                <input type="hidden" name="No_Cotizacion" value="${cotizacion[0]}">
+                                                <input type="text" name="Tipo_Cotizacion" value="${cotizacion[1]}">
+                                                <input type="text" name="Ubicacion" value="${cotizacion[2]}">
+                                                <input type="text" name="Fecha_Parcial_Evento_Cotización" value="${cotizacion[3]}">
+                                                <input type="text" name="Fecha_Hora_Cotizacion" value="${cotizacion[4]}">
+                                                <input type="text" name="Valor_Cotización" value="${cotizacion[5]}">
+                                                <input type="text" name="Cantidad_Personas_Cotización" value="${cotizacion[6]}">
+                                                <input type="text" name="Cotizante_Correo" value="${cotizacion[7]}">
+                                                <input type="text" name="Nombre_Cotizante" value="${cotizacion[8]}">
+                                                <input type="text" name="Apellido_Cotizante" value="${cotizacion[9]}">
+                                                <input type="text" name="Telefono_Cotizante" value="${cotizacion[10]}">
+                                                <input type="text" name="idServicios" value="${cotizacion[11]}">
+                                                <input type="text" name="Valor_Servicios" value="${cotizacion[12]}">
+                                                <input type="text" name="Tipo_Servicios" value="${cotizacion[13]}">
+                                                <input type="text" name="Descripcion_Servicios" value="${cotizacion[14]}">
+                                                <button type="submit">Actualizar</button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
