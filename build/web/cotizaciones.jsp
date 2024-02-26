@@ -38,31 +38,56 @@
                         <tbody>
                             <c:forEach var="cotizacion" items="${cotizaciones}">
                                 <tr>
-                                    <td>${cotizacion[0]}</td>
-                                    <td>${cotizacion[1]}</td>
-                                    <td>${cotizacion[2]}</td>
-                                    <td>${cotizacion[3]}</td>
-                                    <td>${cotizacion[4]}</td>
-                                    <td>${cotizacion[5]}</td>
-                                    <td>${cotizacion[6]}</td>
                                     <td>${cotizacion[7]}</td>
-                                    <td>${cotizacion[8]}</td>
-                                    <td>${cotizacion[9]}</td>
-                                    <td>${cotizacion[10]}</td>
-                                    <td>${cotizacion[11]}</td>
-                                    <td>${cotizacion[12]}</td>
-                                    <td>${cotizacion[13]}</td>
-                                    <td>${cotizacion[14]}</td>
-                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
-                                    <td><i class="fa-solid fa-trash"></i></td>
+                                    <td>${cotizacion[1]}</td>
+                                    <td>
+                                        <!-- Botón para mostrar el detalle -->
+                                        <button class="ver-detalle-btn">Ver Detalle</button>
+                                        <!-- Detalle desplegable oculto por defecto -->
+                                        <div class="detalle">
+                                            <!-- Aquí debes agregar el contenido detallado -->
+                                            <table>
+                                                <tr>
+                                                    <td>${cotizacion[2]}</td>
+                                                    <td>${cotizacion[3]}</td>
+                                                    <td>${cotizacion[4]}</td>
+                                                    <td>${cotizacion[5]}</td>
+                                                    <td>${cotizacion[6]}</td>
+                                                    <td>${cotizacion[0]}</td>
+                                                    <td>${cotizacion[8]}</td>
+                                                    <td>${cotizacion[9]}</td>
+                                                    <td>${cotizacion[10]}</td>
+                                                    <td>${cotizacion[11]}</td>
+                                                    <td>${cotizacion[12]}</td>
+                                                    <td>${cotizacion[13]}</td>
+                                                    <td>${cotizacion[14]}</td>
+                                                    <td><i class="fa-solid fa-user-plus crear-cliente-btn" style="cursor: pointer;"></i></td>
+                                                    <td><i class="fa-solid fa-trash"></i></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
                                 </tr>
                             </c:forEach>
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Script para manejar el clic en el botón "Ver Detalle"
+            document.querySelectorAll('.ver-detalle-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Obtener el elemento padre de este botón (fila de la tabla)
+                    const fila = this.closest('tr');
+                    // Buscar el detalle asociado a esta fila
+                    const detalle = fila.querySelector('.detalle');
+                    // Cambiar el estado de visualización del detalle
+                    detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+                });
+            });
+        </script>
     </body>
 
 </html>
