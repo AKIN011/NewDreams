@@ -1,13 +1,12 @@
 <%-- 
-    Document   : login
-    Created on : 10/02/2024, 6:37:45 p. m.
+    Document   : reestablecerContraseña
+    Created on : 27/02/2024, 5:12:28 p. m.
     Author     : Felipe Rodriguez
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -23,9 +22,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/styleslogin.css">
     </head>
-
-    <body class="d-flex flex-column min-vh-100">
-        <!-- Responsive navbar-->
+    <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
                 <a href="index.jsp"
@@ -65,31 +62,20 @@
         </nav>
 
         <div class="wrapper">
-            
-             <div class="logo" >
-                    <img src="images/Logo.png" alt="New Dreams">
-             </div>
-            
-            <form class="p-3 mt-3" action="LoginServlet" method="post">
-                <div class="form-field d-flex align-items-center">
-                    <span class="far fa-user"></span>
-                    <input type="text" name="userName" id="userName" placeholder="Usuario">
-                </div>
-                <div class="form-field d-flex align-items-center">
-                    <span class="fas fa-key"></span>
-                    <input type="password" name="password" id="pwd" placeholder="Contraseña">
-                </div>
-                <button class="btn mt-3">Ingresar</button>
-            </form>
-            <div class="text-center fs-6">
-                <a href="reestablecerContraseña.jsp">¿Olvidaste la contraseña?</a>
+            <div class="logo">
+                <img src="images/Logo.png" alt="New Dreams">
             </div>
-            <% if (request.getParameter("error") != null && request.getParameter("error").equals("true")) { %>
-            <div class="text-danger">Credenciales incorrectas. Por favor, intenta de nuevo.</div>
-            <% }%>
+            <form class="p-3 mt-3" action="reestablecerContrasenaServlet" method="post">
+                <p>Ingresa tu correo electronico para reestablecer tu contraseña</p>
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-envelope"></span>
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                </div>
+                <button class="btn mt-3">Restablecer contraseña</button>
+            </form>
         </div>
 
-        <!-- Footer-->
+
         <footer class="py-5 bg-dark footer mt-3">
             <div class="container">
                 <div class="row">
@@ -116,5 +102,4 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
-
 </html>

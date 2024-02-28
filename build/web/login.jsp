@@ -82,7 +82,7 @@
                 <button class="btn mt-3">Ingresar</button>
             </form>
             <div class="text-center fs-6">
-                <a href="#">¿Olvidaste la contraseña?</a>
+                <a href="reestablecerContraseña.jsp">¿Olvidaste la contraseña?</a>
             </div>
             <% if (request.getParameter("error") != null && request.getParameter("error").equals("true")) { %>
             <div class="text-danger">Credenciales incorrectas. Por favor, intenta de nuevo.</div>

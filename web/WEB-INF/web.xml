@@ -16,6 +16,18 @@
         <servlet-name>PrincipalServlet</servlet-name>
         <servlet-class>Controlador.PrincipalServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>reestablecerContrasenaServlet</servlet-name>
+        <servlet-class>Controlador.reestablecerContrasenaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ValidarOtpServlet</servlet-name>
+        <servlet-class>Controlador.ValidarOtpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NuevaContrasenaServlet</servlet-name>
+        <servlet-class>Controlador.NuevaContrasenaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -31,6 +43,18 @@
     <servlet-mapping>
         <servlet-name>PrincipalServlet</servlet-name>
         <url-pattern>/PrincipalServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reestablecerContrasenaServlet</servlet-name>
+        <url-pattern>/reestablecerContrasenaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidarOtpServlet</servlet-name>
+        <url-pattern>/ValidarOtpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NuevaContrasenaServlet</servlet-name>
+        <url-pattern>/NuevaContrasenaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

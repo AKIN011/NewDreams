@@ -84,7 +84,6 @@ public class PrincipalServlet extends HttpServlet {
             if (menu.equals("Servicios")) {
                 request.getRequestDispatcher("servicios.jsp").forward(request, response);
             }
-            throw new AssertionError();
 
         }
 
