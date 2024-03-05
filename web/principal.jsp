@@ -62,54 +62,15 @@
                         <a href="PrincipalServlet?menu=Servicios" target="myFrame" class="nav_link">
                             <span class="nav_name">Servicios</span>
                         </a>
-            <div class="l-navbar" id="nav-bar">
-                <nav class="nav">
-                    <div>
-                        <div class="logo">
-                            <img src="images/Logo.png" alt="logo">
-                        </div>
-                        <div class="nav_list">
-                            <%
-                                String usuario = (String) session.getAttribute("usuario");
-                                String rol = (String) session.getAttribute("rol");
-                            %>
-                            <a class="nav_link">
-                                <span class="nav_name"><%= usuario%></span>
-                            </a>
-                            <a class="nav_link">
-                                <span class="nav_name"><%= rol%></span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Inicio" target="myFrame" class="nav_link active">
-                                <span class="nav_name">Inicio</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Cotizantes&accion=listar" target="myFrame" class="nav_link">
-                                <span class="nav_name">Cotizantes</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Cotizaciones" target="myFrame" class="nav_link">
-                                <span class="nav_name">Cotizaciones</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Clientes" target="myFrame" class="nav_link">
-                                <span class="nav_name">Clientes</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Eventos" target="myFrame" class="nav_link">
-                                <span class="nav_name">Eventos</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Estados" target="myFrame" class="nav_link">
-                                <span class="nav_name">Estados</span>
-                            </a>
-                            <a href="PrincipalServlet?menu=Servicios" target="myFrame" class="nav_link">
-                                <span class="nav_name">Servicios</span>
-                            </a>
-
-                        </div>
                     </div>
-                    <!-- Botón de cerrar sesión -->
-                    <a id="logoutButton" name="logoutButton" class="nav_link">
-                        <i class='bx bx-log-out nav_icon'></i>
-                        <span class="nav_name">Cerrar Sesión</span>
-                    </a>
-                </nav>
-            </div>
+                </div>
+                <!-- Botón de cerrar sesión -->
+                <a id="logoutButton" name="logoutButton" class="nav_link">
+                    <i class='bx bx-log-out nav_icon'></i>
+                    <span class="nav_name">Cerrar Sesión</span>
+                </a>
+            </nav>
+        </div>
 
         <div class="Frame">
             <iframe id="myFrame" name="myFrame">
