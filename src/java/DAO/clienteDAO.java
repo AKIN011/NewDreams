@@ -8,6 +8,7 @@ import java.util.List;
 
 public class clienteDAO {
 
+
     Connection con = new conexion().conectar();
     PreparedStatement ps;
     ResultSet rs;
@@ -20,18 +21,18 @@ public class clienteDAO {
         try {
             // Se establece la conexión a la base de datos utilizando la clase 'conexion'
             Connection con = new conexion().conectar();
-
+            
             // Se define la consulta SQL para verificar las credenciales del cliente
             String query = "SELECT COUNT(*) FROM Cliente WHERE Correo_cotizante = ? AND Contraseña_Cliente = ?";
-
+            
             // Se prepara la consulta SQL
             PreparedStatement pst = con.prepareStatement(query);
             pst.setString(1, correo); // Se establece el primer parámetro (correo) en la consulta
             pst.setString(2, contraseña); // Se establece el segundo parámetro (contraseña) en la consulta
-
+            
             // Se ejecuta la consulta y se obtiene el resultado
             ResultSet rs = pst.executeQuery();
-
+            
             // Si la consulta devuelve algún resultado
             if (rs.next()) {
                 int count = rs.getInt(1); // Se obtiene el valor de la primera columna del resultado

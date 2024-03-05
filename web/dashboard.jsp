@@ -25,8 +25,8 @@
         <!--Container Main start-->
         <div class="container-">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-brands fa-wpforms"></i>
                             
@@ -37,8 +37,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-solid fa-handshake"></i>
                             
@@ -49,8 +49,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-solid fa-sliders"></i>
                             
@@ -61,8 +61,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-solid fa-users"></i>
                             
@@ -73,8 +73,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-solid fa-magnifying-glass-chart"></i>
                             
@@ -85,8 +85,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="card bg-info text-black">
+                <div class="col-lg-5 col-md-5">
+                    <div class="card bg-info text-white">
                         <div class="card-body text-center align-items-center">
                             <i class="fa-solid fa-money-check-dollar"></i>
                             

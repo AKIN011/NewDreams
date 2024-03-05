@@ -63,15 +63,15 @@
                             <span class="nav_name">Servicios</span>
                         </a>
 
+                        </div>
                     </div>
-                </div>
-                <!-- Botón de cerrar sesión -->
-                <a id="logoutButton" name="logoutButton" class="nav_link">
-                    <i class='bx bx-log-out nav_icon'></i>
-                    <span class="nav_name">Cerrar Sesión</span>
-                </a>
-            </nav>
-        </div>
+                    <!-- Botón de cerrar sesión -->
+                    <a id="logoutButton" name="logoutButton" class="nav_link">
+                        <i class='bx bx-log-out nav_icon'></i>
+                        <span class="nav_name">Cerrar Sesión</span>
+                    </a>
+                </nav>
+            </div>
 
         <div class="Frame">
             <iframe id="myFrame" name="myFrame">
