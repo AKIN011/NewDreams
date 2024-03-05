@@ -46,15 +46,16 @@ a span{
 .header_img img{
     width: 40px
 }
-.l-navbar{
+.l-navbar {
     position: fixed;
     top: 0;
-    left: -30%;
-    width: var(--nav-width);
-    height: 100vh;
-    background: linear-gradient(to bottom, #cccafd 20%, #cccafd, #cccafd, #FFFFFF); /* Ajusta las posiciones del gradiente */
-    transition: .3s;
+    left: 0;
+    width: var(--nav-width); /* Ajusta el ancho según sea necesario */
+    height: 100vh; /* Ajusta la altura según sea necesario */
+    background: linear-gradient(to bottom, #cccafd 20%, #cccafd, #cccafd, #FFFFFF); /* Ajusta el fondo según sea necesario */
+    transition: none; /* Deshabilita cualquier transición o animación */
 }
+
 .logo {
     margin-top: 20px;
     width: 100%;
@@ -74,6 +75,7 @@ a span{
     justify-content: space-between;
     overflow: hidden
 }
+
 .nav_logo, .nav_link{
     display: grid;
     grid-template-columns: max-content max-content;
@@ -139,4 +141,5 @@ a span{
     left: 600px;
     background: transparent;
 }
+
 
