@@ -47,7 +47,7 @@
                                         <div class="detalle">
                                             <!-- Aquí debes agregar el contenido detallado -->
                                             <form action="actualizarCotizacion" method="post">
-                                                <input type="hidden" name="No_Cotizacion" value="${cotizacion[0]}">
+                                                <input type="text" name="No_Cotizacion" value="${cotizacion[0]}" readonly>
                                                 <input type="text" name="Tipo_Cotizacion" value="${cotizacion[1]}">
                                                 <input type="text" name="Ubicacion" value="${cotizacion[2]}">
                                                 <input type="text" name="Fecha_Parcial_Evento_Cotización" value="${cotizacion[3]}">
