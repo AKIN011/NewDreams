@@ -58,6 +58,8 @@ select.addEventListener('change', function () {
         tengoLugarForm.style.display = 'none';
     }
 });
+
+//Mostrar calendario
 var today = new Date();
 var next30days = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
 flatpickr("#event_date", {
@@ -81,6 +83,7 @@ document.getElementById('toggle_date_icon').addEventListener('click', function (
     }
 });
 
+//Crear cliente
 $(document).ready(function() {
     $('.crear-cliente-btn').click(function() {
         $('#formulario-crear').modal('show');
