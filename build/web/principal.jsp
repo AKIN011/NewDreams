@@ -65,6 +65,7 @@
                             </a>
 
                         </div>
+
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
@@ -103,6 +104,7 @@
                         <a href="PrincipalServlet?menu=Servicios" target="myFrame" class="nav_link">
                             <span class="nav_name">Servicios</span>
                         </a>
+
                     </div>
                 </div>
                 <!-- Botón de cerrar sesión -->
