@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="js/scripts.js"></script>
+        <script src="js/scriptPrincipal.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
@@ -32,7 +32,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Cotizaciones&accion=listar">Cotizaciones</a>
+                            <a class="small text-black stretched-link" onclick="loadContent('PrincipalServlet?menu=Cotizaciones&accion=listar'); return false;">Cotizaciones</a>
                             <div class="small text-black"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Eventos&accion=listar">Eventos</a>
+                            <a class="small text-black stretched-link" onclick="loadContent('PrincipalServlet?menu=Eventos'); return false;">Eventos</a>
                             <div class="small text-black"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Servicios">Servicios</a>
+                            <a class="small text-black stretched-link" onclick="loadContent('PrincipalServlet?menu=Servicios'); return false;">Servicios</a>
                             <div class="small text-black"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Clientes&accion=listar">Clientes</a>
+                            <a class="small text-black stretched-link" onclick="loadContent('PrincipalServlet?menu=Clientes&accion=listar'); return false;">Clientes</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                             
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-center">
-                            <a class="small text-black stretched-link" href="PrincipalServlet?menu=Estados">Estados</a>
+                            <a class="small text-black stretched-link" onclick="loadContent('PrincipalServlet?menu=Estados'); return false;">Estados</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>

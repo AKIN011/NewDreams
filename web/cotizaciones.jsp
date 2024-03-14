@@ -44,25 +44,64 @@
                                         <!-- Botón para mostrar el detalle -->
                                         <button class="ver-detalle-btn">Ver Detalle</button>
                                         <!-- Detalle desplegable oculto por defecto -->
-                                        <div class="detalle">
-                                            <!-- Aquí debes agregar el contenido detallado -->
-                                            <form action="actualizarCotizacion" method="post">
-                                                <input type="text" name="No_Cotizacion" value="${cotizacion[0]}" readonly>
-                                                <input type="text" name="Tipo_Cotizacion" value="${cotizacion[1]}">
-                                                <input type="text" name="Ubicacion" value="${cotizacion[2]}">
-                                                <input type="text" name="Fecha_Parcial_Evento_Cotización" value="${cotizacion[3]}">
-                                                <input type="text" name="Fecha_Hora_Cotizacion" value="${cotizacion[4]}">
-                                                <input type="text" name="Valor_Cotización" value="${cotizacion[5]}">
-                                                <input type="text" name="Cantidad_Personas_Cotización" value="${cotizacion[6]}">
-                                                <input type="text" name="Cotizante_Correo" value="${cotizacion[7]}">
-                                                <input type="text" name="Nombre_Cotizante" value="${cotizacion[8]}">
-                                                <input type="text" name="Apellido_Cotizante" value="${cotizacion[9]}">
-                                                <input type="text" name="Telefono_Cotizante" value="${cotizacion[10]}">
-                                                <input type="text" name="idServicios" value="${cotizacion[11]}">
-                                                <input type="text" name="Valor_Servicios" value="${cotizacion[12]}">
-                                                <input type="text" name="Tipo_Servicios" value="${cotizacion[13]}">
-                                                <input type="text" name="Descripcion_Servicios" value="${cotizacion[14]}">
-                                                <button type="submit">Actualizar</button>
+                                        <div class = "container detalle">
+                                            <form id="contact-form" role="form">
+                                                <div class="controls">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="form_name">Tipo de evento</label>
+                                                                <input type="text" value="${cotizacion[1]}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="event_location">Lugar del evento</label>
+                                                                <input value="${cotizacion[2]}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="form_email">Cantidad de personas</label>
+                                                                <input value="${cotizacion[6]}">                                                        </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="toggle_date">Fecha del evento</label>
+                                                                <input value="${cotizacion[3]}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h1>Servicios</h1>
+                                                    <div class="row">
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <label for="service_quantity">Cantidad</label>
+                                                                    <input id="service_quantity" type="text" name="service_quantity" class="form-control" placeholder="0" required="required">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="service_name">Nombre del servicio</label>
+                                                                    <input id="service_quantity" type="text" name="service_quantity" class="form-control" placeholder="0" required="required" value="${servicio.getServicioTipo()}" readonly>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="service_unit_price">Precio unitario</label>
+                                                                    <input id="service_quantity" type="text" name="service_quantity" class="form-control" placeholder="0" required="required" value="${servicio.getServicioValor()}" readonly>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="service_total_price">Precio total</label>
+                                                                    <input type="number" class="form-control" placeholder="Precio total calculado" readonly>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
                                             </form>
                                         </div>
                                     </td>
